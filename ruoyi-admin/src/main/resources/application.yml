@@ -89,6 +89,15 @@ spring:
         max-active: 8
         # #连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1ms
+  main:
+    # 解决启动项目报错的问题
+    allow-bean-definition-overriding: true
+  activiti:
+    # 创建历史表
+    history-level: full
+    db-history-used: true
+    # 关闭自动部署
+    check-process-definitions: false
 
 # token配置
 token:
